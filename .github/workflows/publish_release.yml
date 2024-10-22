@@ -24,14 +24,16 @@ jobs:
             -configuration Release \
             -destination "generic/platform=macOS" \
             -archivePath "archives/eligibility_util" \
-            SKIP_INSTALL=NO
+            SKIP_INSTALL=NO \
+            ARCHS=x86_64
           xcodebuild archive \
             -project eligibility.xcodeproj \
             -scheme eligibility_util_sip \
             -configuration Release \
             -destination "generic/platform=macOS" \
             -archivePath "archives/eligibility_util_sip" \
-            SKIP_INSTALL=NO
+            SKIP_INSTALL=NO \
+            ARCHS=x86_64
       - name: Compute Checksum
         id: checksum
         run: |
