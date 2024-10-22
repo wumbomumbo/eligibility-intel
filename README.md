@@ -1,4 +1,4 @@
-# eligibility
+# eligibility-intel
 
 This project is an open source reimplementation of eligibility related stuff.
 
