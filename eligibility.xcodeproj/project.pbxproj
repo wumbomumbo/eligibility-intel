@@ -105,7 +105,7 @@
 			publicHeaders = (
 				os_eligibility.h,
 			);
-			target = 276F6D2C2C34537E00748E4D /* system_eligibility */;
+			target = 276F6D2C2C34537E00748E4D /* eligibility */;
 		};
 		279878372C600042006C82FF /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -119,7 +119,7 @@
 			membershipExceptions = (
 				EligibilityDomainType.c,
 			);
-			target = 276F6D2C2C34537E00748E4D /* system_eligibility */;
+			target = 276F6D2C2C34537E00748E4D /* eligibility */;
 		};
 		27C8D3AB2C900608008053DA /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -220,7 +220,7 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		277F016A2C3A943000899CDA /* eligibility_util */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (27EE1CE42C3B045A004AFE9B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 27C8D3AB2C900608008053DA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = eligibility_util; sourceTree = "<group>"; };
 		27EC6A6B2C34627B00F76D70 /* EligibilityCore */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (279878372C600042006C82FF /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 279878382C600042006C82FF /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = EligibilityCore; sourceTree = "<group>"; };
-		27EC6A752C3468DD00F76D70 /* system_eligibility */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (277FFF992C39909C00899CDA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 27EC6A7C2C3468DD00F76D70 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = system_eligibility; sourceTree = "<group>"; };
+		27EC6A752C3468DD00F76D70 /* eligibility */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (277FFF992C39909C00899CDA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 27EC6A7C2C3468DD00F76D70 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = eligibility; sourceTree = "<group>"; };
 		27EC6ACC2C3468E200F76D70 /* eligibilityd */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (27EC6AEA2C3468E200F76D70 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 27D0B0A32C58C602008BF3D6 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = eligibilityd; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -279,7 +279,7 @@
 				27EC6A4D2C345EC500F76D70 /* README.md */,
 				27EC6A6B2C34627B00F76D70 /* EligibilityCore */,
 				27EC6ACC2C3468E200F76D70 /* eligibilityd */,
-				27EC6A752C3468DD00F76D70 /* system_eligibility */,
+				27EC6A752C3468DD00F76D70 /* eligibility */,
 				277F016A2C3A943000899CDA /* eligibility_util */,
 				2730C7862C1F120B00F5D46B /* Products */,
 				2730C7952C1F13F700F5D46B /* Frameworks */,
@@ -342,9 +342,9 @@
 			productReference = 2730C7852C1F120B00F5D46B /* eligibilityd */;
 			productType = "com.apple.product-type.tool";
 		};
-		276F6D2C2C34537E00748E4D /* system_eligibility */ = {
+		276F6D2C2C34537E00748E4D /* eligibility */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 276F6D332C34537E00748E4D /* Build configuration list for PBXNativeTarget "system_eligibility" */;
+			buildConfigurationList = 276F6D332C34537E00748E4D /* Build configuration list for PBXNativeTarget "eligibility" */;
 			buildPhases = (
 				276F6D292C34537E00748E4D /* Headers */,
 				276F6D2A2C34537E00748E4D /* Sources */,
@@ -355,9 +355,9 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				27EC6A752C3468DD00F76D70 /* system_eligibility */,
+				27EC6A752C3468DD00F76D70 /* eligibility */,
 			);
-			name = system_eligibility;
+			name = eligibility;
 			packageProductDependencies = (
 			);
 			productName = eligibility;
@@ -471,7 +471,7 @@
 			projectRoot = "";
 			targets = (
 				2730C7842C1F120B00F5D46B /* eligibilityd */,
-				276F6D2C2C34537E00748E4D /* system_eligibility */,
+				276F6D2C2C34537E00748E4D /* eligibility */,
 				277F01612C3A942A00899CDA /* eligibility_util_internal */,
 				27EE1CD42C3B0426004AFE9B /* eligibility_util */,
 				27C8D3902C9005A3008053DA /* eligibility_util_sip */,
@@ -520,7 +520,7 @@
 /* Begin PBXTargetDependency section */
 		277F03382C3AA16500899CDA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 276F6D2C2C34537E00748E4D /* system_eligibility */;
+			target = 276F6D2C2C34537E00748E4D /* eligibility */;
 			targetProxy = 277F03372C3AA16500899CDA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -562,6 +562,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEPLOYMENT_POSTPROCESSING = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -580,7 +581,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -624,6 +625,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -637,7 +639,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -655,7 +657,6 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				OTHER_CODE_SIGN_FLAGS = "-i com.apple.eligibilityd";
 				OTHER_LDFLAGS = (
 					"-iframework",
@@ -684,7 +685,6 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				OTHER_CODE_SIGN_FLAGS = "-i com.apple.eligibilityd";
 				OTHER_LDFLAGS = (
 					"-iframework",
@@ -709,9 +709,8 @@
 				DEVELOPMENT_TEAM = VB7MJ8R223;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_PREFIX = libsystem_;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
@@ -731,9 +730,8 @@
 				DEVELOPMENT_TEAM = VB7MJ8R223;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_PREFIX = libsystem_;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
@@ -761,7 +759,6 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.eligibility-util";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -786,7 +783,6 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.eligibility-util";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -808,7 +804,6 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.eligibility-util";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -831,7 +826,6 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.eligibility-util";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -854,7 +848,6 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.eligibility-util";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -878,7 +871,6 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.eligibility-util";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -908,7 +900,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		276F6D332C34537E00748E4D /* Build configuration list for PBXNativeTarget "system_eligibility" */ = {
+		276F6D332C34537E00748E4D /* Build configuration list for PBXNativeTarget "eligibility" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				276F6D342C34537E00748E4D /* Debug */,
