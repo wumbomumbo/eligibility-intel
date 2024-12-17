@@ -2,11 +2,9 @@
 
 This project is an open source reimplementation of eligibility related stuff.
 
-> [!IMPORTANT]
-> This project is under active, ongoing development and requires the latest beta
-> version of macOS and Xcode.
->
-> Currently it needs macOS 15 Beta 1 with Xcode 16 Beta 1
+> [!NOTE]
+> Apple has made this effectively useless without modding system files or spoofing your SMBIOS, with this you can enable the UI but the Anvil framework will prevent the AI downloading.
+> This tool works best on 15.2 Beta 2 or lower.
 
 ## Disclaimer
 
