@@ -3,8 +3,9 @@
 This project is an open source reimplementation of eligibility related stuff.
 
 > [!NOTE]
-> Apple has made this effectively useless without modding system files or spoofing your SMBIOS, with this you can enable the UI but the Anvil framework will prevent the AI downloading.
-> This tool works best on 15.2 Beta 2 or lower.
+> Past 15.2 Beta 3 Apple has made this effectively useless without modding system files or spoofing your SMBIOS, with this you can enable the UI but the Anvil framework will prevent the AI downloading.
+> 
+> This tool works best on 15.2 Beta 2 or lower, however I personally couldn't get the AI models to fully download.
 
 ## Disclaimer
 
