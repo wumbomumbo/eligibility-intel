@@ -17,9 +17,6 @@
 
 @property(nonatomic, assign) BOOL invertLocatedCountries;
 @property(nonatomic, assign) BOOL invertBillingCountries;
-@property(nonatomic, assign) EligibilityAnswer answer;
-@property(nonatomic, strong, nullable) NSDictionary *context;
-@property(nonatomic, assign) EligibilityInputTypes supportedInputs;
 @property(nonatomic, strong, nullable) NSSet *locatedCountriesOfInterest;
 @property(nonatomic, strong, nullable) NSSet *billingCountriesOfInterest;
 @property(nonatomic, strong, nullable) NSSet *deviceClassesOfInterest;
@@ -195,7 +192,7 @@
     return EligibilityAnswerSourceComputed;
 }
 
-- (NSDictionary *)status {
+- (NSDictionary<NSString *, NSNumber *> *)status {
     NSMutableDictionary *dict = [NSMutableDictionary new];
     InputManager *manager = InputManager.sharedInstance;
     EligibilityInputType inputType = EligibilityInputTypeCountryLocation;

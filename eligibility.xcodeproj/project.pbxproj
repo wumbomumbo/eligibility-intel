@@ -149,6 +149,7 @@
 				Configuration/GlobalConfiguration.m,
 				Domain/Domains/EligibilityDomain.m,
 				Domain/Domains/GreymatterDomain.m,
+				Domain/Domains/IronDomain.m,
 				Domain/Domains/TestDomain.m,
 				Domain/Domains/XcodeLLMDomain.m,
 				Domain/EligibilityTimer.m,

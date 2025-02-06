@@ -34,9 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, assign, readonly) BOOL invertLocatedCountries;
 @property(nonatomic, assign, readonly) BOOL invertBillingCountries;
-@property(nonatomic, assign, readonly) EligibilityAnswer answer;
-@property(nonatomic, strong, readonly, nullable) NSDictionary *context;
-@property(nonatomic, assign, readonly) EligibilityInputTypes supportedInputs;
+@property(nonatomic, assign) EligibilityAnswer answer;
+@property(nonatomic, strong, nullable) NSDictionary *context;
+@property(nonatomic, assign) EligibilityInputTypes supportedInputs;
 @property(nonatomic, strong, readonly, nullable) NSSet *locatedCountriesOfInterest;
 @property(nonatomic, strong, readonly, nullable) NSSet *billingCountriesOfInterest;
 @property(nonatomic, strong, readonly, nullable) NSSet *deviceClassesOfInterest;
@@ -45,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong, readonly, nullable) NSSet *deviceLanguagesOfInterest;
 
 @property(nonatomic, assign, readonly) EligibilityAnswerSource answerSource;
-@property(nonatomic, strong, readonly) NSDictionary * status;
+@property(nonatomic, strong, readonly) NSDictionary<NSString *, NSNumber *> *status;
 @property(nonatomic, assign, readonly) EligibilityAnswer defaultAnswer;
 @property(nonatomic, assign, readonly) EligibilityDomainType domain;
 @property(nonatomic, strong, readonly) NSNotificationName domainChangeNotificationName;
