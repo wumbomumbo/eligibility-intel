@@ -20,6 +20,7 @@
 }
 
 - (void)asyncRefetchMobileAsset {
+    // com.apple.MobileAsset.OSEligibility
     asyncBlock(self.mobileAssetQueue, ^{
         // TODO
     });

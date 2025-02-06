@@ -2,8 +2,7 @@
 //  XcodeLLMDomain.h
 //  eligibilityd
 //
-//  Created by Kyle on 2024/6/24.
-//  Audited for RELEASE_2024_BETA_1
+//  Audited for macOS 15.2
 //  Status: Complete
 
 #import <Foundation/Foundation.h>

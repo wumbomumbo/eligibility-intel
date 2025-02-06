@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, retain) NSObject<OS_dispatch_queue> *mobileAssetQueue;
 
 @property (nonatomic, strong) BoronAsset* ironAsset;
+@property (nonatomic, strong) BoronAsset* xcodeLLMAsset;
 
 - (void)asyncRefetchMobileAsset;
 @end
