@@ -21,9 +21,10 @@ void asyncBlock(dispatch_queue_t queue, dispatch_block_t block) {
     // Related source code:
     // https://bug-224288-attachments.webkit.org/attachment.cgi?id=425415
     // https://opensource.apple.com/source/Security/Security-58286.70.7/OSX/sec/securityd/SecRevocationDb.c
-    ELIGIBILITY_UNUSED os_transaction_t transaction = os_transaction_create("com.apple.eligibilityd.async-block");
+    os_transaction_t transaction = os_transaction_create("com.apple.eligibilityd.async-block");
     dispatch_async(queue, ^{
         @autoreleasepool {
+            (void)transaction;
             block();
         }
     });
