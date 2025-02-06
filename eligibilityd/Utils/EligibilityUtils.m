@@ -30,65 +30,26 @@ void asyncBlock(dispatch_queue_t queue, dispatch_block_t block) {
     });
 }
 
-const char *copy_eligibility_domain_data_vault_directory_path(void) {
-    char *absolute_path;
-    const char *relative_path = "/private/var/db/os_eligibility";
-    int size = asprintf(&absolute_path, "%s%s", ELIGIBILITY_ROOT, relative_path);
-    if (size == -1) {
-        os_log_error(eligibility_log(), "%s: Failed to construct absolute path for relative path: %s", __func__, relative_path);
-    }
-    return absolute_path;
+// MARK: - Path Construction Macro
+#define DEFINE_COPY_ELIGIBILITY_PATH(func_name, rel_path) \
+const char * func_name(void) { \
+    char *absolute_path; \
+    const char *relative_path = rel_path; \
+    int size = asprintf(&absolute_path, "%s%s", ELIGIBILITY_ROOT, relative_path); \
+    if (size == -1) { \
+        os_log_error(eligibility_log(), "%s: Failed to construct absolute path for relative path: %s", __func__, relative_path); \
+    } \
+    return absolute_path; \
 }
 
-const char *copy_eligibility_domain_daemon_directory_path(void) {
-    char *absolute_path;
-    const char *relative_path = "/private/var/db/eligibilityd";
-    int size = asprintf(&absolute_path, "%s%s", ELIGIBILITY_ROOT, relative_path);
-    if (size == -1) {
-        os_log_error(eligibility_log(), "%s: Failed to construct absolute path for relative path: %s", __func__, relative_path);
-    }
-    return absolute_path;
-}
-
-const char *copy_eligibility_domain_input_manager_plist_path(void) {
-    char *absolute_path;
-    const char *relative_path = "/private/var/db/eligibilityd/eligibility_inputs.plist";
-    int size = asprintf(&absolute_path, "%s%s", ELIGIBILITY_ROOT, relative_path);
-    if (size == -1) {
-        os_log_error(eligibility_log(), "%s: Failed to construct absolute path for relative path: %s", __func__, relative_path);
-    }
-    return absolute_path;
-}
-
-const char * copy_eligibility_domain_domains_serialization_path(void) {
-    char *absolute_path;
-    const char *relative_path = "/private/var/db/eligibilityd/domains.data";
-    int size = asprintf(&absolute_path, "%s%s", ELIGIBILITY_ROOT, relative_path);
-    if (size == -1) {
-        os_log_error(eligibility_log(), "%s: Failed to construct absolute path for relative path: %s", __func__, relative_path);
-    }
-    return absolute_path;
-}
-
-const char * copy_eligibility_domain_answer_plist_path(void) {
-    char *absolute_path;
-    const char *relative_path = "/private/var/db/os_eligibility/eligibility.plist";
-    int size = asprintf(&absolute_path, "%s%s", ELIGIBILITY_ROOT, relative_path);
-    if (size == -1) {
-        os_log_error(eligibility_log(), "%s: Failed to construct absolute path for relative path: %s", __func__, relative_path);
-    }
-    return absolute_path;
-}
-
-const char * copy_eligibility_domain_public_answer_plist_path(void) {
-    char *absolute_path;
-    const char *relative_path = "/private/var/db/eligibilityd/eligibility.plist";
-    int size = asprintf(&absolute_path, "%s%s", ELIGIBILITY_ROOT, relative_path);
-    if (size == -1) {
-        os_log_error(eligibility_log(), "%s: Failed to construct absolute path for relative path: %s", __func__, relative_path);
-    }
-    return absolute_path;
-}
+// MARK: - Path Functions
+DEFINE_COPY_ELIGIBILITY_PATH(copy_eligibility_domain_data_vault_directory_path, "/private/var/db/os_eligibility")
+DEFINE_COPY_ELIGIBILITY_PATH(copy_eligibility_domain_daemon_directory_path, "/private/var/db/eligibilityd")
+DEFINE_COPY_ELIGIBILITY_PATH(copy_eligibility_domain_input_manager_plist_path, "/private/var/db/eligibilityd/eligibility_inputs.plist")
+DEFINE_COPY_ELIGIBILITY_PATH(copy_eligibility_domain_domains_serialization_path, "/private/var/db/eligibilityd/domains.data")
+DEFINE_COPY_ELIGIBILITY_PATH(copy_eligibility_domain_answer_plist_path, "/private/var/db/os_eligibility/eligibility.plist")
+DEFINE_COPY_ELIGIBILITY_PATH(copy_eligibility_domain_public_answer_plist_path, "/private/var/db/eligibilityd/eligibility.plist")
+DEFINE_COPY_ELIGIBILITY_PATH(copy_eligibility_domain_mobile_asset_override_path, "/private/var/db/eligibilityd/mobileAssetParametersOverride.plist")
 
 EligibilityXPCMessageType eligibility_xpc_get_message_type(xpc_object_t object) {
     xpc_type_t type = xpc_get_type(object);
