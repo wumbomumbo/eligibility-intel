@@ -164,6 +164,7 @@
 				Input/Inputs/DeviceLocaleInput.m,
 				Input/Inputs/DeviceRegionCodeInput.m,
 				Input/Inputs/EligibilityInput.m,
+				Input/Inputs/ExternalBootDriveInput.m,
 				Input/Inputs/GenerativeModelSystemInput.m,
 				Input/Inputs/GreymatterQueueInput.m,
 				Input/Inputs/LocatedCountryInput.m,
