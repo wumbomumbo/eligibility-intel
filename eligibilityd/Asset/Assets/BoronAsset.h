@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BoronAsset : NSObject <NSCopying>
 
-@property(nonatomic, strong) NSSet *countryCodes;
+@property(nonatomic, strong) NSSet<NSString *> *countryCodes;
 @property(nonatomic, assign) NSUInteger gracePeriodInSeconds;
 
 @end

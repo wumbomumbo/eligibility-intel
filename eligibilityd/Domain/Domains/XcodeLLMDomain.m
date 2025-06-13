@@ -2,11 +2,11 @@
 //  XcodeLLMDomain.m
 //  eligibilityd
 //
-//  Created by Kyle on 2024/6/24.
-//  Audited for RELEASE_2024_BETA_1
+//  Audited for macOS 15.2
 //  Status: Complete
 
 #import "XcodeLLMDomain.h"
+#import "MobileAssetManager.h"
 
 @interface XcodeLLMDomain ()
 - (void)_internal_doInit;
@@ -52,7 +52,13 @@
 }
 
 - (EligibilityInputStatus)computeInputStatusForDeviceRegionCodesInput:(DeviceRegionCodeInput *)input {
-    return input.isChinaSKU ? EligibilityInputStatusNotEligible : EligibilityInputStatusEligible;
+    // macOS 15.0 Beta 1
+    // return input.isChinaSKU ? EligibilityInputStatusNotEligible : EligibilityInputStatusEligible;
+    NSSet<NSString *> *countryCodes = MobileAssetManager.sharedInstance.xcodeLLMAsset.countryCodes;
+    if (input.deviceRegionCode == nil) {
+        return EligibilityInputStatusEligible;
+    }
+    return [countryCodes containsObject:input.deviceRegionCode] ? EligibilityInputStatusNotEligible : EligibilityInputStatusEligible;
 }
 
 @end

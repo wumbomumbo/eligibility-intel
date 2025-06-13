@@ -2,10 +2,11 @@
 //  MobileAssetManager.h
 //  eligibilityd
 //
-//  Created by Kyle on 2024/7/14.
-//
+//  Audited for macOS 15.2
+//  Status: WIP
 
 #import <Foundation/Foundation.h>
+#import "BoronAsset.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -13,10 +14,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 
-@property (nonatomic, retain) NSObject<OS_dispatch_queue> *internalQueue;
-@property (nonatomic, retain) NSObject<OS_dispatch_queue> *mobileAssetQueue;
+// TODO
+@property (nonatomic, strong) BoronAsset *greymatterAsset;
+@property (nonatomic, strong) BoronAsset *xcodeLLMAsset;
+@property (nonatomic, strong) BoronAsset *ironAsset;
 
+@property (nonatomic, strong) NSNumber *assetVersion;
+@property (nonatomic, strong, readonly) NSObject<OS_dispatch_queue> *internalQueue;
+@property (nonatomic, strong, readonly) NSObject<OS_dispatch_queue> *mobileAssetQueue;
+@property (nonatomic, strong) NSNumber *fallbackVersion;
 
+- (void)registerForMobileAssetUpdateNotification;
 - (void)asyncRefetchMobileAsset;
 @end
 
